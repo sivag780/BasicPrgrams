@@ -1,5 +1,5 @@
 #include<stdio.h>
 
 int main(){ 
-  printf("Hello World!\n Welcome to February");
+  printf("Hello World!\n clone done");
 }
