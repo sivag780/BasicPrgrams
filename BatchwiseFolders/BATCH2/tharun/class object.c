@@ -21,7 +21,8 @@ public:
 
 int main()
 {
-	A obj ;               
-	obj.initdata(1,'s');   
+	A obj ;                 
+	obj.initdata(1,'s');  
+
 	obj.display();
 }
