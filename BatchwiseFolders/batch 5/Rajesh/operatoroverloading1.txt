@@ -1,0 +1,89 @@
+//OPERATOR OVERLOADING 
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+	int a,b;
+	float c,d;
+	A(){cout<<"default ctor"<<endl;}
+	A(int x,float y )
+	{
+		a=x;
+		c=y;
+		cout<<"inside the ctor:"<<a<<"\t"<<c<<endl;	
+	}
+	//assignment operator 
+	A operator =(const A &obj)
+	{
+		a=obj.a;
+		b=obj.b;
+		c=obj.c;
+		d=obj.d;	
+	}
+	// operator overloading 
+	A operator +(const A &obj)
+	{
+		A temp;
+		temp.a=a+obj.a;
+		temp.c=c+obj.c;
+		temp.b=b+obj.b;
+		temp.d=d+obj.d;
+		return temp;	
+	}
+	// substraction by operaator overloading 
+	A operator -(const A &obj)
+	{
+		A temp;
+		temp.a=a-obj.a;
+		temp.c=c-obj.c;
+		temp.b=b-obj.b;
+		temp.d=d-obj.d;
+		return temp;	
+	}
+	//multiplication by oprator overloading 
+	A operator *(const A &obj)
+	{
+		A temp;
+		temp.a=a*obj.a;
+		temp.c=c*obj.c;
+		temp.b=b*obj.b;
+		temp.d=d*obj.d;
+		return temp;
+	}
+	//copy  ctor 
+	A(A &obj)
+	{
+		a=obj.a;
+		b=obj.b;
+		c=obj.c;
+		d=obj.d;
+		cout<<"copy ctor called "<<endl;
+	}
+	void disp()
+	{
+		cout<<"a="<<a<<"\nc="<<c<<endl;
+		cout<<"b="<<b<<"\nd="<<d<<endl;	
+	}
+};
+int main ()
+{ 
+	A A1,A2(10,20.000);
+	A2.b=50;
+	A2.d=250.25;
+	A2.disp();
+	cout<<"copy ctor values:"<<endl;
+	A A3=A2; //copy ctor called or assignment operator
+	A3.disp();
+	cout <<"operator overloading addition(A2+A3):"<<endl;
+	A A4=  A2+A3;
+	A4.disp();
+	cout <<"operator overloading  substraction ( sub=A4-A3):"<<endl;
+	A sub=A4-A3;
+	sub.disp();
+	cout <<"operator overloading multipli ( mul=A4*A3):"<<endl;
+	A mul=A4*A3;
+	mul.disp();
+}

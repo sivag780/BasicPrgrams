@@ -1,0 +1,31 @@
+//global function 
+#include<iostream>
+#include<string>
+using namespace std;
+class student
+{
+	string name,course;
+protected :
+	int id ;
+	float marks;
+	void initdata()
+	{
+		name="Rajesh Nayak";
+		course="Mech Engg";
+		id=102;
+		marks=900.525;
+	}
+	friend void disp(student &s);
+	friend int main();
+};
+void disp(student &s)
+{
+	cout<<"Name:"<<s.name<<"\ncourse:"<<s.course<<endl;
+	cout<<"Id:"<<s.id<<"\nmarks:"<<s.marks<<endl;
+}
+int main()
+{
+	student s;
+	s.initdata();
+	disp(s);
+}
