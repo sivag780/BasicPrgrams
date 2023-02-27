@@ -1,0 +1,45 @@
+// DIRTRUCTORS 
+/*#include<iostream>
+using namespace std;
+	int count=0;
+class base
+{
+public:
+	base()
+	{
+		count++;
+		cout <<"base constructor  called :"<<count<<endl;
+	}
+private:
+	~base()
+	{
+			count--;
+		cout <<"base distructor  called :"<<count<<endl;
+	}
+};
+class derived:public base
+//INHERITING THE BASE CLASS TO DERIVED CLASS
+{
+public:
+int num;
+derived()
+{
+num=0;
+num++;
+cout<<"derived ctor number called:"<<num<<endl;
+}
+~derived()
+{
+
+num--;
+cout<<"derived dtor number called:"<<num<<endl;
+
+}
+};
+int main()
+{
+derived D1,D2;
+
+}*/
+ /* 
+ 
